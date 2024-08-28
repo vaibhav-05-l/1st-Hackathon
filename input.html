@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CulturEconnect - Explore Local Culture</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="input.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>CulturEconnect</h1>
+        <p><bold><u>Discover and Engage with Local Cultural Events</u></bold></p>
+    </header>
+    <div class="hero-section">
+        <img src="https://media.licdn.com/dms/image/C5612AQHFnSZyynFmZg/article-cover_image-shrink_720_1280/0/1642133464104?e=2147483647&v=beta&t=FKlTzJIaVYud2nsFOS6rIPc1COCWmZyyh6We9-FJChY"height="150"width="150" alt="Hero Image" class="hero-image"></a><hr>
+    </div>
+    <p><h2>Cultural Fest Images:</h2></p>
+
+    <div class="image-row">
+        <img src="https://m.economictimes.com/thumb/msid-62724365,width-1200,height-900,resizemode-4,imgsize-318101/celebrate-the-onset-of-spring-with-these-cultural-festivals-across-india.jpg"width="200" alt="Image 1">
+        
+        <img src="https://www.holidaymonk.com/wp-content/uploads/2022/04/Holi-Festival-of-Colors.jpg"width='200' alt="Image 2">
+        
+        <img src="https://static.toiimg.com/thumb/msid-80334120,width-748,height-499,resizemode=4,imgsize-2898008/.jpg" alt="Image 3"width="200">
+    </div>
+    <br>
+    <div class="image-row">
+        <img src="https://www.artofliving.org/sites/www.artofliving.org/files/styles/original_image/public/unity2/blog_image/world%20culture%20festival.jpg?itok=_k2W-q1G"width="200" alt="Image 1">
+        
+        <img src="https://www.indianyouth.net/wp-content/uploads/2016/03/festivals-of-India.jpg"width='200' alt="Image 2">
+        
+        <img src="https://static.vecteezy.com/system/resources/previews/010/770/822/non_2x/happy-janmashtami-indian-cultural-festival-background-design-free-vector.jpg" alt="Image 3"width="200">
+    </div>
+    
+    <main>
+        <section id="events">
+            <h2 style="font-size:40px;">Upcoming Events</h2>
+            <ol>
+               <big><li><strong>Local Festival:</strong> Enjoy local music and food. <em>Date:</em> August 30, 2024</li>
+                <li><strong>Cultural Workshop:</strong> Learn traditional crafts. <em>Date:</em> September 5, 2024</li>
+                <li><strong>Dance Shows:</strong> Learn traditional Dance. <em>Date:</em> September 7, 2024</li>
+                <li><strong>Food Festivals:</strong> Learn traditional Foods. <em>Date:</em> September 10, 2024</li></big>
+                
+                <!-- Add more events here -->
+            </ol>
+        </section>
+        <!-- Forms Section -->
+<section id="forms">
+    <div class="form-container">
+        <!-- Registration Form -->
+        <div class="form-section registration-form">
+            <h2>Register</h2>
+            <form action="your-server-endpoint" method="post">
+                <label for="reg-name">Name:</label>
+                <input type="text" id="reg-name" name="name" required>
+
+                <label for="reg-surname">Surname:</label>
+                <input type="text" id="reg-surname" name="surname" required>
+
+                <label for="reg-contact">Contact Information:</label>
+                <input type="text" id="reg-contact" name="contact" required>
+
+                <label for="reg-email">Email:</label>
+                <input type="email" id="reg-email" name="email" required>
+
+                <label for="reg-interest">Interests:</label>
+                <input type="text" id="reg-interest" name="interest" required>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <!-- Query Form -->
+        <div class="form-section query-form">
+            <h2>Submit Your Query</h2>
+            <form action="#" method="post">
+                <label for="query-name">Name:</label>
+                <input type="text" id="query-name" name="name" required>
+
+                <label for="query-email">Email:</label>
+                <input type="email" id="query-email" name="email" required>
+
+                <label for="query-text">Your Query:</label>
+                <textarea id="query-text" name="query" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+<br>
+<!-- Personalized Event Calendar Form -->
+<section id="personalized-calendar">
+    <h2 style="text-align: center; color: #FF5733; font-family: 'Georgia', serif;">Create Your Personalized Event Calendar</h2>
+    <form id="event-preferences-form" style="background-color: #f4f4f4; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <label for="name" style="font-weight: bold; font-family: 'Verdana', sans-serif;">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #ddd;">
+
+        <label for="email" style="font-weight: bold; font-family: 'Verdana', sans-serif;">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #ddd;">
+
+        <label for="interests" style="font-weight: bold; font-family: 'Verdana', sans-serif;">Select Your Interests:</label>
+        <select id="interests" name="interests[]" multiple style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ddd; margin-bottom: 10px;">
+            <option value="music">Music Festivals</option>
+            <option value="art">Art Exhibitions</option>
+            <option value="theatre">Theatre Performances</option>
+            <option value="dance">Dance Shows</option>
+            <option value="food">Food Festivals</option>
+        </select>
+
+        <button type="submit" style="background-color: #28A745; color: #fff; padding: 10px 20px; border-radius: 4px; border: none; cursor: pointer; font-family: 'Arial', sans-serif; width: 100%;">Generate My Event Calendar</button>
+    </form>
+</section>
+
+
+     <h1>Map:</h1><hr>
+     <br>      
+        <section id="map"></section>
+    </main>
+    
+     
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script><hr>
+    <script src="input.js"></script> <!-- Link to your JavaScript file -->
+    
+</body>
+</html>
